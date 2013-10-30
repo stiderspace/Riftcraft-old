@@ -1,7 +1,7 @@
 package com.stider.Riftcraft;
 
-import com.pahimar.letsmod.lib.Reference;
-import com.pahimar.letsmod.proxy.CommonProxy;
+import com.tmc.Riftcraft.lib.Reference;
+import com.tmc.Riftcraft.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -11,15 +11,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-/**
- * LetsMod
- * 
- * LetsMod
- * 
- * @author pahimar
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * 
- */
+
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class Riftcraft {
 	
