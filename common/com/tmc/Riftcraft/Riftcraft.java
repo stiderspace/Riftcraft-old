@@ -1,4 +1,4 @@
-package com.stider.Riftcraft;
+package com.tmc.Riftcraft;
 
 import com.tmc.Riftcraft.lib.Reference;
 import com.tmc.Riftcraft.proxy.CommonProxy;
