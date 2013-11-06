@@ -1,4 +1,4 @@
-package com.tmc.Riftcraft.lib;
+package com.stider.riftcraft.lib;
 
 public class BlockIds {
 	

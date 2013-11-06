@@ -1,7 +1,12 @@
-package com.tmc.Riftcraft;
+package com.stider.riftcraft;
 
-import com.tmc.Riftcraft.lib.Reference;
-import com.tmc.Riftcraft.proxy.CommonProxy;
+import net.minecraft.creativetab.CreativeTabs;
+
+import com.stider.riftcraft.block.ModBlocks;
+import com.stider.riftcraft.creativetab.CreativeTabRFC;
+import com.stider.riftcraft.item.ModItems;
+import com.stider.riftcraft.lib.Reference;
+import com.stider.riftcraft.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -20,6 +25,8 @@ public class Riftcraft {
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
+	
+	public static CreativeTabs tabsRFC = new CreativeTabRFC(CreativeTabs.getNextID(), Reference.MOD_ID);
 
     /***
      * This is code that is executed prior to your mod being initialized into of Minecraft
@@ -34,7 +41,11 @@ public class Riftcraft {
      */
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        
+      
+    	ModBlocks.init();
+    	
+    	ModItems.init();
+    	
     }
     
     /***
@@ -50,7 +61,8 @@ public class Riftcraft {
      */
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        
+       
+    	
     }
     
     /***
