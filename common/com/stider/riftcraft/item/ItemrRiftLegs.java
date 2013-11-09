@@ -12,13 +12,13 @@ import com.stider.riftcraft.lib.Strings;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemRiftPlate extends ItemArmor {
+public class ItemrRiftLegs extends ItemArmor {
 
-	public ItemRiftPlate(int id , EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
+public ItemrRiftLegs(int id , EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
 		
 		super(id, par2EnumArmorMaterial, par3, par4);
 		this.setCreativeTab(Riftcraft.tabsRFC);
-		this.setUnlocalizedName(Strings.RIFT_PLATE);
+		this.setUnlocalizedName(Strings.RIFT_LEGS);
 		//this.setTextureName(Strings.RESOURCE_PREFIX + Strings.RIFT_PLATE);
 		
 
@@ -30,17 +30,13 @@ public class ItemRiftPlate extends ItemArmor {
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1RegisterIcon) {
-		this.itemIcon = par1RegisterIcon.registerIcon(Strings.RESOURCE_PREFIX + Strings.RIFT_PLATE);
+		this.itemIcon = par1RegisterIcon.registerIcon(Strings.RESOURCE_PREFIX + Strings.RIFT_LEGS);
 	
 	}
 	@SideOnly(Side.CLIENT)
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer) {
-		return Strings.RESOURCE_PREFIX + Strings.RIFTSUIT_LOACTION_1;
+		return Strings.RESOURCE_PREFIX + Strings.RIFTSUIT_LOACTION_2;
 	}
 	
 		
 }
- 
-
-
-
