@@ -1,9 +1,12 @@
 # Item localizations
-item.riftcraft:riftPlate.name=Rift ChestPlate
-item.riftcraft:blackHole.name=BlackHole
+item.riftplate.name=Rift ChestPlate
+item.blackhole.name=BlackHole
 
 
 
 
 # Block localizations
-tile.riftcraft:warpedBlock.name= Warped Block
+tile.WarpedBlock.name= Warped Block
+
+
+container.furnace = furnace

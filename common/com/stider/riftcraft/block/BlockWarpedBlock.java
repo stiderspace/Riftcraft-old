@@ -4,8 +4,8 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
+import com.stider.riftcraft.Riftcraft;
 import com.stider.riftcraft.item.ModItems;
 import com.stider.riftcraft.lib.Strings;
 
@@ -15,7 +15,7 @@ public class BlockWarpedBlock extends Block {
 		
 		super(id, Material.rock);
 		setUnlocalizedName(Strings.WARPEDBLOCK_NAME);
-	    setCreativeTab(CreativeTabs.tabBlock);
+	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
 	    setStepSound(soundStoneFootstep);
 	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.WARPEDBLOCK_NAME);
@@ -27,9 +27,9 @@ public class BlockWarpedBlock extends Block {
 	
 	public int idDropped(int par1, Random par2Random, int par3)
     {
-        int item = par2Random.nextInt(3);
+        int item = par2Random.nextInt(100);
         
-        if(item+10 <= 50)
+        if(item <= 50 && item >= 10)
         {
         	return ModItems.warpedmater.itemID;
         }
@@ -39,7 +39,7 @@ public class BlockWarpedBlock extends Block {
         	return Block.stone.blockID;
         }
         
-        else if(item+50 <= 100)
+        else if(item <= 100 && item >= 50)
         {
         	return Block.dirt.blockID;
         }
@@ -47,6 +47,7 @@ public class BlockWarpedBlock extends Block {
     	
         
     }
+	
 	
 
 	

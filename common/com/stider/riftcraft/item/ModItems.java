@@ -33,10 +33,7 @@ public class ModItems {
 		blackHole = new ItemblackHole(ItemIds.BLACK_HOLE_DEFAULT);
 		warpedmater = new itemWarpedmatter(ItemIds.WARPED_MATTER_DEFAULT);
 		rift = new itemRift(ItemIds.RIFT_DEFAULT);
-		
-		LanguageRegistry.addName(riftPlate, Strings.RIFT_PLATE_NAME);
-		LanguageRegistry.addName(blackHole, Strings.BLACK_HOLE_NAME);
-		
+	
 		
 		
 
