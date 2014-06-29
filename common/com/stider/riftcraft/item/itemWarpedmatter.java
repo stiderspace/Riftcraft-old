@@ -11,10 +11,10 @@ import com.stider.riftcraft.lib.Strings;
 public class itemWarpedmatter extends Item {
 
 	public itemWarpedmatter(int par1) {
-		super(par1);
+		super();
 		
 		
-		maxStackSize = 1;
+		maxStackSize = 16;
 		setCreativeTab(Riftcraft.tabsRFC);
 		setUnlocalizedName(Strings.WARPED_MATTER);
 		this.setTextureName(Strings.RESOURCE_PREFIX + Strings.WARPED_MATTER);
@@ -26,10 +26,10 @@ public class itemWarpedmatter extends Item {
 	 public boolean onItemUse(ItemStack ItemStack, EntityPlayer EntityPlayer, World World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
 	    {
 		 	
-		 int RandomNumber = World.rand.nextInt(20);
+		 int RandomNumber = World.rand.nextInt(100);
 		 if(World.isRemote)
 		 {
-			 EntityPlayer.addChatMessage("Your number is: " + RandomNumber);
+			 //EntityPlayer.addChatMessage("Your number is: " + RandomNumber);
 		 }
 			return true;
 		 

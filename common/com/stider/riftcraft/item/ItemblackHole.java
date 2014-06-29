@@ -8,7 +8,7 @@ import com.stider.riftcraft.lib.Strings;
 public class ItemblackHole extends Item {
 	 
 	public ItemblackHole(int id){
-		super(id);
+		
 		
 		maxStackSize = 1;
 		setCreativeTab(Riftcraft.tabsRFC);

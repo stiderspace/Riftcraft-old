@@ -10,6 +10,7 @@ public class BlockIds {
 	public static int UPGRADE_SLOT_DEFAULT = 2504;
 	public static int MINI_RIFT_DEFAULT = 2505;
 	public static int MINI_BLACKHOLE_DEFAULT = 2506;
+	public static int FURNACE_DEFAULT = 2507;
 			
     public static int WARPEDBLOCK;
     public static int STABILIZER;
@@ -18,5 +19,6 @@ public class BlockIds {
 	public static int UPGRADE_SLOT;
 	public static int MINI_RIFT;
 	public static int MINI_BLACKHOLE;
+	public static int FURNACE;
 
 }

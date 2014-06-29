@@ -10,13 +10,13 @@ public class BlockEngine extends Block {
 	
 public BlockEngine(int id) {
 		
-		super(id, Material.iron);
+		super(Material.iron);
 		
-		setUnlocalizedName(Strings.RIFT_ENGINE_NAME);
+		setBlockName(Strings.RIFT_ENGINE_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(soundAnvilFootstep);
-	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.RIFT_ENGINE_NAME);
+	    setStepSound(Block.soundTypeAnvil);
+	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.RIFT_ENGINE_NAME);
 		
 	}
 

@@ -14,12 +14,12 @@ import com.stider.riftcraft.lib.Strings;
 public class itemRift extends Item {
 
 	public itemRift(int id) {
-		super(id);
-		
+	
 		maxStackSize = 1;
 		setCreativeTab(Riftcraft.tabsRFC);
-		setUnlocalizedName(Strings.BLACK_HOLE);
+		setUnlocalizedName(Strings.RIFT_NAME);
 		this.setTextureName(Strings.RESOURCE_PREFIX + Strings.BLACK_HOLE);
+		
 		
 		
 	}
@@ -44,8 +44,8 @@ public class itemRift extends Item {
 	        if ((EntityPlayer.dimension != 0) && (EntityPlayer.dimension != 1)) {
 	          var4.travelToDimension(0);
 	        }
-	        ChunkCoordinates var8 = EntityPlayer.getBedLocation();
-	        if (var8 == null)
+	        ChunkCoordinates chunkCoordinates = EntityPlayer.getBedLocation();
+	        if (chunkCoordinates == null)
 	        {
 	          int var5 = World.getWorldInfo().getSpawnX();
 	          int var6 = World.getWorldInfo().getSpawnY();
@@ -56,16 +56,17 @@ public class itemRift extends Item {
 	        }
 	        else
 	        {
-	          ChunkCoordinates var9 = EntityPlayerMP.verifyRespawnCoordinates(EntityPlayer.worldObj, var8, true);
+	          ChunkCoordinates var9 = EntityPlayerMP.verifyRespawnCoordinates(EntityPlayer.worldObj, chunkCoordinates, true);
 	          int var10 = var9.posX;
 	          int var11 = var9.posY;
 	          int var12 = var9.posZ;
-	          var4.setPositionAndUpdate(var10, var11, var12);
+	          var4.setPositionAndUpdate(var10 + 0.5, var11, var12 + 0.5);
 	        }
 	      }
 	    }
-	    --ItemStack.stackSize;;
+	    --ItemStack.stackSize;
 	    return ItemStack;
+	    
 	  }
 	
 	

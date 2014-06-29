@@ -11,13 +11,13 @@ public class BlockUpgradeslot extends Block {
 	
 	public BlockUpgradeslot(int id) {
 		
-		super(id, Material.iron);
+		super(Material.iron);
 		
-		setUnlocalizedName(Strings.UPGRADE_SLOT_NAME);
+		setBlockName(Strings.UPGRADE_SLOT_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(soundAnvilFootstep);
-	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.UPGRADE_SLOT_NAME);
+	    setStepSound(Block.soundTypeAnvil);
+	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.UPGRADE_SLOT_NAME);
 		
 	}
 

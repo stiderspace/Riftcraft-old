@@ -14,8 +14,6 @@ public class Strings {
     public static final String RESOURCE_PREFIX = Reference.MOD_ID.toLowerCase() + ":";
 
      
-    /* NBT related constants */
-   
     /* Block name constants */
     public static final String WARPEDBLOCK_NAME = "WarpedBlock";
     public static final String RIFT_ENGINE_NAME = "Rift Engine";
@@ -24,7 +22,7 @@ public class Strings {
     public static final String MINI_RIFT_NAME = "Mini Rift";
     public static final String MINI_BLACKHOLE_NAME = "Mini BlackHole";
     public static final String DWARFSTAR_NAME = "DwaftStarAlloy";
-    
+    public static final String FURNACE = "furnace";
     
 
     /* Item name constants */
@@ -33,6 +31,7 @@ public class Strings {
     public static final String RIFT_BOOTS_NAME = "Rift ChestPlate";
     public static final String RADIATION_HELMET_NAME = "Rift ChestPlate";
     public static final String BLACK_HOLE_NAME = "Black Hole";
+    public static final String RIFT_NAME = "rift";
     public static final String WARPED_MATTER_NAME = "Warped Matter";
     
     /* Armor Textures Location */
@@ -49,6 +48,7 @@ public class Strings {
     
 
     /* TileEntity name constants */
+    public static final String TILE_FURNACE = "furnace";
     
 
 

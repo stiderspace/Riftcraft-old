@@ -10,13 +10,13 @@ public class BlockStabilizer extends Block {
 
 	public BlockStabilizer(int id) {
 		
-		super(id, Material.iron);
+		super(Material.iron);
 		
-		setUnlocalizedName(Strings.STABILIZER_NAME);
+		setBlockName(Strings.STABILIZER_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(soundAnvilFootstep);
-	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.STABILIZER_NAME);
+	    setStepSound(Block.soundTypeAnvil);
+	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.STABILIZER_NAME);
 		
 	
 		
