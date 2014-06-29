@@ -24,6 +24,9 @@ public class Textures {
  
     // Model textures
     public static final ResourceLocation GUI_FURNACE = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "furnace.png");
+<<<<<<< HEAD
 	public static final ResourceLocation Shadow = ResourceLocationHelper.getResourceLocation(MODEL_SHEET_LOCATION + "shadow.png");;
+=======
+>>>>>>> origin/master
     
 }

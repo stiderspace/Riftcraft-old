@@ -4,7 +4,11 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.IItemRenderer;
+<<<<<<< HEAD
 import net.minecraftforge.common.util.ForgeDirection;
+=======
+import net.minecraftforge.common.ForgeDirection;
+>>>>>>> origin/master
 
 import org.lwjgl.opengl.GL11;
 

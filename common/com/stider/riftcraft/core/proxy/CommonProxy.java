@@ -31,7 +31,11 @@ public class CommonProxy implements IGuiHandler {
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
+<<<<<<< HEAD
         TileEntity entity = world.getTileEntity(x, y, z);
+=======
+        TileEntity entity = world.getBlockTileEntity(x, y, z);
+>>>>>>> origin/master
 
         if (entity != null)
         {

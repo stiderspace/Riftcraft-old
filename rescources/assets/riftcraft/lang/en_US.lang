@@ -1,0 +1,21 @@
+# Item localizations
+<<<<<<< HEAD
+riftplate.name=Rift ChestPlate
+blackhole.name=BlackHole
+=======
+item.riftplate.name=Rift ChestPlate
+item.blackhole.name=BlackHole
+>>>>>>> origin/master
+
+
+
+
+# Block localizations
+<<<<<<< HEAD
+tile.WarpedBlock.name=Warped Block
+=======
+tile.WarpedBlock.name= Warped Block
+>>>>>>> origin/master
+
+
+container.furnace = furnace

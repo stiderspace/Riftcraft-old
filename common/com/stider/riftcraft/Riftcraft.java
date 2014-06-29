@@ -2,6 +2,7 @@ package com.stider.riftcraft;
 
 import net.minecraft.creativetab.CreativeTabs;
 
+import com.stider.riftcraft.Packet.PacketManager;
 import com.stider.riftcraft.block.ModBlocks;
 import com.stider.riftcraft.core.proxy.CommonProxy;
 import com.stider.riftcraft.creativetab.CreativeTabRFC;
@@ -17,11 +18,19 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+<<<<<<< HEAD
+=======
+import cpw.mods.fml.common.network.NetworkMod;
+>>>>>>> origin/master
 import cpw.mods.fml.common.network.NetworkRegistry;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NUMBER)
+<<<<<<< HEAD
 
+=======
+@NetworkMod(clientSideRequired=true, serverSideRequired=false, channels = {Reference.ChannelName}, packetHandler = PacketManager.class)
+>>>>>>> origin/master
 public class Riftcraft {
 	
 	@Instance(Reference.MOD_ID)
@@ -52,7 +61,11 @@ public class Riftcraft {
     	
     	proxy.initRenderingAndTextures();
     	
+<<<<<<< HEAD
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, proxy);
+=======
+    	NetworkRegistry.instance().registerGuiHandler(this, proxy);
+>>>>>>> origin/master
        
     	
     }

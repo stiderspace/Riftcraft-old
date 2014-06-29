@@ -4,8 +4,11 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+<<<<<<< HEAD
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+=======
+>>>>>>> origin/master
 
 import com.stider.riftcraft.Riftcraft;
 import com.stider.riftcraft.item.ModItems;
@@ -15,8 +18,13 @@ public class BlockWarpedBlock extends Block {
 
 	public BlockWarpedBlock(int id){
 		
+<<<<<<< HEAD
 		super(Material.rock);
 		setBlockName(Strings.WARPEDBLOCK_NAME);
+=======
+		super(id, Material.rock);
+		setUnlocalizedName(Strings.WARPEDBLOCK_NAME);
+>>>>>>> origin/master
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
 	    setStepSound(Block.soundTypeAnvil);
