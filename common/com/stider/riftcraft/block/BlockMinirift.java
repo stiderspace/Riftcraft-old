@@ -13,13 +13,13 @@ public class BlockMinirift extends Block {
 	
     public BlockMinirift(int id) {
 		
-		super(Material.iron);
+		super(id, Material.iron);
 		
-		setBlockName(Strings.MINI_RIFT_NAME);
+		setUnlocalizedName(Strings.MINI_RIFT_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(Block.soundTypeAnvil);
-	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.MINI_RIFT_NAME);
+	    setStepSound(soundAnvilFootstep);
+	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.MINI_RIFT_NAME);
 		
 	}
     

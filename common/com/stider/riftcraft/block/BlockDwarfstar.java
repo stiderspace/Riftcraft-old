@@ -10,13 +10,13 @@ public class BlockDwarfstar extends Block {
 
 	public BlockDwarfstar(int id) {
 		
-		super(Material.iron);
+		super(id, Material.iron);
 		
-		setBlockName(Strings.DWARFSTAR_NAME);
+		setUnlocalizedName(Strings.DWARFSTAR_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(Block.soundTypeAnvil);
-	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.DWARFSTAR_NAME);
+	    setStepSound(soundAnvilFootstep);
+	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.DWARFSTAR_NAME);
 		
 	}
 

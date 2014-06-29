@@ -5,7 +5,8 @@ import net.minecraft.item.Item;
 import com.stider.riftcraft.Riftcraft;
 import com.stider.riftcraft.lib.ItemIds;
 import com.stider.riftcraft.lib.Strings;
-import com.stider.riftcraft.util.RegisterHelper;
+
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ModItems {
 	
@@ -23,8 +24,6 @@ public class ModItems {
 	
 	public static void init(){
 		
-		
-		
 		int renderArmor = Riftcraft.proxy.addArmor(Strings.RIFTSUIT);
 		
 		radiationhelm = new ItemRadiationHelm(ItemIds.RADIATION_HELM_DEFAULT, Material.riftArmor, renderArmor, 0);
@@ -34,27 +33,12 @@ public class ModItems {
 		blackHole = new ItemblackHole(ItemIds.BLACK_HOLE_DEFAULT);
 		warpedmater = new itemWarpedmatter(ItemIds.WARPED_MATTER_DEFAULT);
 		rift = new itemRift(ItemIds.RIFT_DEFAULT);
-<<<<<<< HEAD
-		registerItems();
-=======
 	
 		
 		
 
->>>>>>> origin/master
 		
 	}
-	private static void registerItems()
-    {
-        RegisterHelper.registerItem(blackHole);
-        RegisterHelper.registerItem(riftPlate);
-        RegisterHelper.registerItem(radiationhelm);
-        RegisterHelper.registerItem(riftLegs);
-        RegisterHelper.registerItem(riftBoots);
-        RegisterHelper.registerItem(rift);
-        RegisterHelper.registerItem(warpedmater);
-        
-    }
 	
 	
 	

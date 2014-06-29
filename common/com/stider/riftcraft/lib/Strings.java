@@ -14,8 +14,6 @@ public class Strings {
     public static final String RESOURCE_PREFIX = Reference.MOD_ID.toLowerCase() + ":";
 
      
-<<<<<<< HEAD
-=======
     /* NBT related constants */
     public static final String NBT_ITEM_CHARGE_LEVEL_KEY = "itemChargeLevel";
     public static final String NBT_ITEM_MODE_KEY = "itemMode";
@@ -42,7 +40,6 @@ public class Strings {
     public static final String NBT_ENCODED_ATTR_ENERGY_NAME = "energyName";
 
    
->>>>>>> origin/master
     /* Block name constants */
     public static final String WARPEDBLOCK_NAME = "WarpedBlock";
     public static final String RIFT_ENGINE_NAME = "Rift Engine";
@@ -60,7 +57,6 @@ public class Strings {
     public static final String RIFT_BOOTS_NAME = "Rift ChestPlate";
     public static final String RADIATION_HELMET_NAME = "Rift ChestPlate";
     public static final String BLACK_HOLE_NAME = "Black Hole";
-    public static final String RIFT_NAME = "rift";
     public static final String WARPED_MATTER_NAME = "Warped Matter";
     
     /* Armor Textures Location */

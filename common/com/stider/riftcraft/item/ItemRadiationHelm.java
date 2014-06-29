@@ -1,7 +1,8 @@
 package com.stider.riftcraft.item;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
@@ -13,9 +14,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemRadiationHelm extends ItemArmor {
 
-public ItemRadiationHelm(int id , ArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
+public ItemRadiationHelm(int id , EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
 		
-		super(par2EnumArmorMaterial, par3, par4);
+		super(id, par2EnumArmorMaterial, par3, par4);
 		this.setCreativeTab(Riftcraft.tabsRFC);
 		this.setUnlocalizedName(Strings.RADIATION_HELMET);
 		//this.setTextureName(Strings.RESOURCE_PREFIX + Strings.RIFT_PLATE);
@@ -28,7 +29,7 @@ public ItemRadiationHelm(int id , ArmorMaterial par2EnumArmorMaterial, int par3,
 	
 	
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1RegisterIcon) {
+	public void registerIcons(IconRegister par1RegisterIcon) {
 		this.itemIcon = par1RegisterIcon.registerIcon(Strings.RESOURCE_PREFIX + Strings.RADIATION_HELMET);
 	
 	}

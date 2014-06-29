@@ -1,7 +1,6 @@
 package com.stider.riftcraft.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 import com.stider.riftcraft.lib.BlockIds;
@@ -48,11 +47,7 @@ public class ModBlocks
     private static void initBlockRecipes()
     {
 
-<<<<<<< HEAD
-        GameRegistry.addRecipe(new ItemStack(warpedBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), Blocks.glass });
-=======
         GameRegistry.addRecipe(new ItemStack(warpedBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), Block.glass });
->>>>>>> origin/master
 
     }
 }

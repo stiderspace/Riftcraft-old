@@ -1,8 +1,6 @@
 package com.stider.riftcraft.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.stider.riftcraft.block.ModBlocks;
@@ -23,12 +21,10 @@ public class CreativeTabRFC extends CreativeTabs {
     /**
      * the itemID for the item to be displayed on the tab
      */
-	@Override
-	public Item getTabIconItem() {
-		
-		return Item.getItemFromBlock(ModBlocks.warpedBlock);
-	}
-
+    public ItemStack getIconItemStack()
+    {
+        return new ItemStack(ModBlocks.warpedBlock);
+    }
     
    // Setting Name
     
@@ -36,9 +32,6 @@ public class CreativeTabRFC extends CreativeTabs {
     {
         return "Utilities Blocks";
     }
-
-
-
 }
 
 

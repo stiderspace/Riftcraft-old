@@ -11,7 +11,7 @@ import com.stider.riftcraft.lib.Strings;
 public class itemWarpedmatter extends Item {
 
 	public itemWarpedmatter(int par1) {
-		super();
+		super(par1);
 		
 		
 		maxStackSize = 16;
@@ -29,7 +29,7 @@ public class itemWarpedmatter extends Item {
 		 int RandomNumber = World.rand.nextInt(100);
 		 if(World.isRemote)
 		 {
-			 //EntityPlayer.addChatMessage("Your number is: " + RandomNumber);
+			 EntityPlayer.addChatMessage("Your number is: " + RandomNumber);
 		 }
 			return true;
 		 

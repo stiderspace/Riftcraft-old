@@ -1,19 +1,10 @@
 package com.stider.riftcraft.block;
 
-<<<<<<< HEAD
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
-=======
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
->>>>>>> origin/master
 import net.minecraft.world.World;
 
 import com.stider.riftcraft.Riftcraft;
@@ -30,28 +21,21 @@ public class BlockMiniblackhole extends BlockContainer {
 
     public BlockMiniblackhole(int id) {
 		
-		super(Material.iron);
+		super(id, Material.iron);
 		
-		setBlockName(Strings.MINI_BLACKHOLE_NAME);
+		setUnlocalizedName(Strings.MINI_BLACKHOLE_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(Block.soundTypeAnvil);
-	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.MINI_BLACKHOLE_NAME);
+	    setStepSound(soundAnvilFootstep);
+	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.MINI_BLACKHOLE_NAME);
 		
 	}
     
-<<<<<<< HEAD
-    private IIcon[] IconBuffer = new IIcon[2];
-    
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister IconRegister)
-=======
     private Icon[] IconBuffer = new Icon[2];
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister IconRegister)
->>>>>>> origin/master
     {
         IconBuffer[0] = IconRegister.registerIcon(Reference.MOD_ID + ":" + "blackhole side");
         IconBuffer[1] = IconRegister.registerIcon(Reference.MOD_ID + ":" + "blackhole");
@@ -69,16 +53,6 @@ public class BlockMiniblackhole extends BlockContainer {
 
         return RenderIds.blackholeRender;
     }
-<<<<<<< HEAD
-    
-	@Override
-	public TileEntity createNewTileEntity(World var1, int var2) {
-
-		return new TileEntityBlackhole();
-	}
-    
-
-=======
 
     @Override
     public TileEntity createNewTileEntity(World world)
@@ -86,17 +60,13 @@ public class BlockMiniblackhole extends BlockContainer {
         return new TileEntityBlackhole();
     }
     
->>>>>>> origin/master
     @Override
     public boolean isOpaqueCube()
     {
         return false;
     }
-<<<<<<< HEAD
-=======
     
 	
->>>>>>> origin/master
 
 }
 

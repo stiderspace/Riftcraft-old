@@ -2,10 +2,10 @@ package com.stider.riftcraft;
 
 import net.minecraft.creativetab.CreativeTabs;
 
+import com.stider.riftcraft.Packet.PacketManager;
 import com.stider.riftcraft.block.ModBlocks;
 import com.stider.riftcraft.core.proxy.CommonProxy;
 import com.stider.riftcraft.creativetab.CreativeTabRFC;
-import com.stider.riftcraft.entity.ModEntity;
 import com.stider.riftcraft.item.ModItems;
 import com.stider.riftcraft.lib.Reference;
 import com.stider.riftcraft.tile.ModTileEntity;
@@ -17,11 +17,12 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NUMBER)
-
+@NetworkMod(clientSideRequired=true, serverSideRequired=false, channels = {Reference.ChannelName}, packetHandler = PacketManager.class)
 public class Riftcraft {
 	
 	@Instance(Reference.MOD_ID)
@@ -36,7 +37,6 @@ public class Riftcraft {
     public void preInit(FMLPreInitializationEvent event) {
       
     	ModBlocks.init();
-    	ModEntity.init();
     	
     	ModItems.init();
     	ModTileEntity.init();
@@ -52,8 +52,9 @@ public class Riftcraft {
     	
     	proxy.initRenderingAndTextures();
     	
-    	NetworkRegistry.INSTANCE.registerGuiHandler(this, proxy);
-
+    	NetworkRegistry.instance().registerGuiHandler(this, proxy);
+       
+    	
     }
 
     @EventHandler
