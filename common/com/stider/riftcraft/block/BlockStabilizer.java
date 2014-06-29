@@ -8,15 +8,15 @@ import com.stider.riftcraft.lib.Strings;
 
 public class BlockStabilizer extends Block {
 
-	public BlockStabilizer(int id) {
+	public BlockStabilizer() {
 		
-		super(id, Material.iron);
+		super(Material.iron);
 		
-		setUnlocalizedName(Strings.STABILIZER_NAME);
+		setBlockName(Strings.STABILIZER_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(soundAnvilFootstep);
-	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.STABILIZER_NAME);
+	    //setStepSound(soundAnvilFootstep);
+	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.STABILIZER_NAME);
 		
 	
 		

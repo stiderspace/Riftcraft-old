@@ -1,9 +1,9 @@
 package com.stider.riftcraft.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
-import com.stider.riftcraft.lib.BlockIds;
 import com.stider.riftcraft.lib.Strings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -23,14 +23,14 @@ public class ModBlocks
     public static void init()
     {
 
-        warpedBlock = new BlockWarpedBlock(BlockIds.WARPEDBLOCK_DEFAULT);
-        stabilizer = new BlockStabilizer(BlockIds.STABILIZER_DEFAULT);
-        engine = new BlockEngine(BlockIds.RIFT_ENGINE_DEFAULT);
-        upgradeslot = new BlockUpgradeslot(BlockIds.UPGRADE_SLOT_DEFAULT);
-        minirift = new BlockMinirift(BlockIds.MINI_RIFT_DEFAULT);
-        miniblackhole = new BlockMiniblackhole(BlockIds.MINI_BLACKHOLE_DEFAULT);
-        dwarfstar = new BlockDwarfstar(BlockIds.DWARFSTAR_DEFAULT);
-        furnace = new Blockfurnace(BlockIds.FURNACE_DEFAULT, true);
+        warpedBlock = new BlockWarpedBlock();
+        stabilizer = new BlockStabilizer();
+        engine = new BlockEngine();
+        upgradeslot = new BlockUpgradeslot();
+        minirift = new BlockMinirift();
+        miniblackhole = new BlockMiniblackhole();
+        dwarfstar = new BlockDwarfstar();
+        furnace = new Blockfurnace(true);
 
         GameRegistry.registerBlock(engine, Strings.RIFT_ENGINE_NAME);
         GameRegistry.registerBlock(minirift, Strings.MINI_RIFT_NAME);
@@ -47,7 +47,7 @@ public class ModBlocks
     private static void initBlockRecipes()
     {
 
-        GameRegistry.addRecipe(new ItemStack(warpedBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), Block.glass });
+        GameRegistry.addRecipe(new ItemStack(warpedBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), Blocks.glass });
 
     }
 }

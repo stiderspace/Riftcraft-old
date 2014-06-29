@@ -11,15 +11,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockMinirift extends Block {
 	
-    public BlockMinirift(int id) {
+    public BlockMinirift() {
 		
-		super(id, Material.iron);
+		super(Material.iron);
 		
-		setUnlocalizedName(Strings.MINI_RIFT_NAME);
+		setBlockName(Strings.MINI_RIFT_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(soundAnvilFootstep);
-	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.MINI_RIFT_NAME);
+	   //setStepSound(soundAnvilFootstep);
+	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.MINI_RIFT_NAME);
 		
 	}
     

@@ -1,6 +1,7 @@
 package com.stider.riftcraft.core.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -30,8 +31,8 @@ public class ClientProxy extends CommonProxy {
         RenderIds.blackholeRender = RenderingRegistry.getNextAvailableRenderId();
         RenderIds.furnace = RenderingRegistry.getNextAvailableRenderId();
         
-        MinecraftForgeClient.registerItemRenderer(ModBlocks.miniblackhole.blockID, new RenderBlackhole());
-        MinecraftForgeClient.registerItemRenderer(ModBlocks.furnace.blockID, new RenderFurnace());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.miniblackhole), new RenderBlackhole());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.furnace), new RenderFurnace());
     
     }
     
@@ -55,7 +56,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
-        TileEntity entity = world.getBlockTileEntity(x, y, z);
+        TileEntity entity = world.getTileEntity(x, y, z);
 
         if (entity != null)
         {

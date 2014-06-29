@@ -26,13 +26,13 @@ public class ModItems {
 		
 		int renderArmor = Riftcraft.proxy.addArmor(Strings.RIFTSUIT);
 		
-		radiationhelm = new ItemRadiationHelm(ItemIds.RADIATION_HELM_DEFAULT, Material.riftArmor, renderArmor, 0);
-		riftPlate = new ItemRiftPlate(ItemIds.RIFT_PLATE_DEFAULT, Material.riftArmor, renderArmor, 1);
-		riftLegs = new ItemrRiftLegs(ItemIds.RIFT_LEGS_DEFAULT, Material.riftArmor, renderArmor, 2);
-		riftBoots = new ItemRiftBoots(ItemIds.RIFT_BOOTS_DEFAULT, Material.riftArmor, renderArmor, 3);
-		blackHole = new ItemblackHole(ItemIds.BLACK_HOLE_DEFAULT);
-		warpedmater = new itemWarpedmatter(ItemIds.WARPED_MATTER_DEFAULT);
-		rift = new itemRift(ItemIds.RIFT_DEFAULT);
+		radiationhelm = new ItemRadiationHelm(Material.riftArmor, renderArmor, 0);
+		riftPlate = new ItemRiftPlate(Material.riftArmor, renderArmor, 1);
+		riftLegs = new ItemrRiftLegs(Material.riftArmor, renderArmor, 2);
+		riftBoots = new ItemRiftBoots(Material.riftArmor, renderArmor, 3);
+		blackHole = new ItemblackHole();
+		warpedmater = new ItemWarpedmatter();
+		rift = new itemRift();
 	
 		
 		

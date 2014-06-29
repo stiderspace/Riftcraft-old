@@ -9,15 +9,15 @@ import com.stider.riftcraft.lib.Strings;
 public class BlockUpgradeslot extends Block {
 
 	
-	public BlockUpgradeslot(int id) {
+	public BlockUpgradeslot() {
 		
-		super(id, Material.iron);
+		super(Material.iron);
 		
-		setUnlocalizedName(Strings.UPGRADE_SLOT_NAME);
+		setBlockName(Strings.UPGRADE_SLOT_NAME);
 	    setCreativeTab(Riftcraft.tabsRFC);
 	    setHardness(5F);
-	    setStepSound(soundAnvilFootstep);
-	    this.setTextureName(Strings.RESOURCE_PREFIX + Strings.UPGRADE_SLOT_NAME);
+	    //setStepSound(soundAnvilFootstep);
+	    this.setBlockTextureName(Strings.RESOURCE_PREFIX + Strings.UPGRADE_SLOT_NAME);
 		
 	}
 

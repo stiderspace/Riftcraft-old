@@ -1,11 +1,11 @@
-package com.stider.riftcraft.core.proxy;
-
-import com.stider.riftcraft.lib.Textures;
+package com.stider.riftcraft.client.render;
 
 import net.minecraft.client.model.ModelPig;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+
+import com.stider.riftcraft.lib.Textures;
 
 public class RenderShadow extends RenderLiving {
 	

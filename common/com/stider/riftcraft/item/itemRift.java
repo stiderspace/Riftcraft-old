@@ -13,8 +13,8 @@ import com.stider.riftcraft.lib.Strings;
 
 public class itemRift extends Item {
 
-	public itemRift(int id) {
-		super(id);
+	public itemRift() {
+		super();
 		
 		maxStackSize = 1;
 		setCreativeTab(Riftcraft.tabsRFC);
