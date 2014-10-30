@@ -2,9 +2,10 @@ package com.stider.riftcraft.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-import com.stider.riftcraft.lib.Strings;
+import com.stider.riftcraft.util.RegisterHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -19,10 +20,11 @@ public class ModBlocks
     public static Block minirift;
     public static Block miniblackhole;
     public static Block furnace;
+    public static Block riftLocator;
+    public static Block blockRift;
 
     public static void init()
     {
-
         warpedBlock = new BlockWarpedBlock();
         stabilizer = new BlockStabilizer();
         engine = new BlockEngine();
@@ -31,15 +33,22 @@ public class ModBlocks
         miniblackhole = new BlockMiniblackhole();
         dwarfstar = new BlockDwarfstar();
         furnace = new Blockfurnace(true);
+        riftLocator = new riftlocator();
+        blockRift = new BlockRift();
+        
+        //Register Blocks
 
-        GameRegistry.registerBlock(engine, Strings.RIFT_ENGINE_NAME);
-        GameRegistry.registerBlock(minirift, Strings.MINI_RIFT_NAME);
-        GameRegistry.registerBlock(upgradeslot, Strings.UPGRADE_SLOT_NAME);
-        GameRegistry.registerBlock(miniblackhole, Strings.MINI_BLACKHOLE_NAME);
-        GameRegistry.registerBlock(warpedBlock, Strings.WARPEDBLOCK_NAME);
-        GameRegistry.registerBlock(stabilizer, Strings.STABILIZER_NAME);
-        GameRegistry.registerBlock(dwarfstar, Strings.DWARFSTAR_NAME);
-        GameRegistry.registerBlock(furnace, Strings.FURNACE);
+        RegisterHelper.registerBlock(engine);
+        RegisterHelper.registerBlock(minirift);
+        RegisterHelper.registerBlock(upgradeslot);
+        RegisterHelper.registerBlock(miniblackhole);
+        RegisterHelper.registerBlock(warpedBlock);
+        RegisterHelper.registerBlock(stabilizer);
+        RegisterHelper.registerBlock(dwarfstar);
+        RegisterHelper.registerBlock(furnace);
+        RegisterHelper.registerBlock(riftLocator);
+        
+        RegisterHelper.registerBlock(blockRift);
 
         initBlockRecipes();
     }
@@ -47,7 +56,7 @@ public class ModBlocks
     private static void initBlockRecipes()
     {
 
-        GameRegistry.addRecipe(new ItemStack(warpedBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), Blocks.glass });
+        GameRegistry.addRecipe(new ItemStack(warpedBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), Items.saddle });
 
     }
 }

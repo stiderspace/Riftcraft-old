@@ -4,9 +4,11 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 
 import com.stider.riftcraft.Riftcraft;
 import com.stider.riftcraft.lib.Strings;
+import com.stider.riftcraft.lib.Textures;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -27,8 +29,8 @@ public ItemRadiationHelm(ArmorMaterial par2EnumArmorMaterial, int par3, int par4
 	
 	}
 	@SideOnly(Side.CLIENT)
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer) {
-		return Strings.RESOURCE_PREFIX + Strings.RIFTSUIT_LOACTION_1;
+	public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, int slot, int layer) {
+		return Textures.RIFT_SUIT1;
 	}
 	
 		

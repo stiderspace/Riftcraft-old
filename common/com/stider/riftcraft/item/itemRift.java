@@ -18,7 +18,7 @@ public class itemRift extends Item {
 		
 		maxStackSize = 1;
 		setCreativeTab(Riftcraft.tabsRFC);
-		setUnlocalizedName(Strings.BLACK_HOLE);
+		setUnlocalizedName(Strings.RIFT);
 		this.setTextureName(Strings.RESOURCE_PREFIX + Strings.BLACK_HOLE);
 		
 		
@@ -61,7 +61,7 @@ public class itemRift extends Item {
 	          int var10 = var9.posX;
 	          int var11 = var9.posY;
 	          int var12 = var9.posZ;
-	          var4.setPositionAndUpdate(var10, var11, var12);
+	          var4.setPositionAndUpdate(var10 + 0.5, var11, var12 + 0.5);
 	        }
 	      }
 	    }

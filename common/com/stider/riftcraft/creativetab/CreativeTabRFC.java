@@ -27,14 +27,6 @@ public class CreativeTabRFC extends CreativeTabs {
         return new ItemStack(ModBlocks.warpedBlock);
     }
     
-   // Setting Name
-    
-    public String getTranslatedTabLabel()
-    {
-        return "Utilities Blocks";
-    }
-
-
 	@Override
 	public Item getTabIconItem() {
 		return Item.getItemFromBlock(ModBlocks.warpedBlock);

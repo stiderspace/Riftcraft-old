@@ -3,10 +3,9 @@ package com.stider.riftcraft.item;
 import net.minecraft.item.Item;
 
 import com.stider.riftcraft.Riftcraft;
-import com.stider.riftcraft.lib.ItemIds;
+import com.stider.riftcraft.lib.Reference;
 import com.stider.riftcraft.lib.Strings;
-
-import cpw.mods.fml.common.registry.LanguageRegistry;
+import com.stider.riftcraft.util.RegisterHelper;
 
 public class ModItems {
 	
@@ -20,11 +19,11 @@ public class ModItems {
 	public static Item rift;
 	public static Item warpedmater;
 	
-	int renderArmor = Riftcraft.proxy.addArmor(Strings.RIFTSUIT);
+
 	
 	public static void init(){
 		
-		int renderArmor = Riftcraft.proxy.addArmor(Strings.RIFTSUIT);
+		int renderArmor = Riftcraft.proxy.addArmor(Reference.MOD_ID + ":" + Strings.RIFTSUIT);
 		
 		radiationhelm = new ItemRadiationHelm(Material.riftArmor, renderArmor, 0);
 		riftPlate = new ItemRiftPlate(Material.riftArmor, renderArmor, 1);
@@ -34,13 +33,20 @@ public class ModItems {
 		warpedmater = new ItemWarpedmatter();
 		rift = new itemRift();
 	
-		
-		
-
+		registerItems();
 		
 	}
 	
-	
-	
+	private static void registerItems()
+    {
+        RegisterHelper.registerItem(blackHole);
+        RegisterHelper.registerItem(riftPlate);
+        RegisterHelper.registerItem(radiationhelm);
+        RegisterHelper.registerItem(riftLegs);
+        RegisterHelper.registerItem(riftBoots);
+        RegisterHelper.registerItem(rift);
+        RegisterHelper.registerItem(warpedmater);
+        
+    }
 
 }

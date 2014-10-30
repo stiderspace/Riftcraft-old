@@ -1,5 +1,7 @@
 package com.stider.riftcraft.core.proxy;
 
+import java.io.File;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
@@ -7,12 +9,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.stider.riftcraft.block.ModBlocks;
+import com.stider.riftcraft.capes.DevCapes;
 import com.stider.riftcraft.client.Gui.GuiFurnace;
 import com.stider.riftcraft.client.render.RenderBlackhole;
 import com.stider.riftcraft.client.render.RenderFurnace;
+import com.stider.riftcraft.client.render.RenderRift;
 import com.stider.riftcraft.client.render.tileentity.TileRenderBlackhole;
 import com.stider.riftcraft.lib.GuiIds;
+import com.stider.riftcraft.lib.Reference;
 import com.stider.riftcraft.lib.RenderIds;
+import com.stider.riftcraft.tile.TileBlockRift;
 import com.stider.riftcraft.tile.TileEntityBlackhole;
 import com.stider.riftcraft.tile.TileEntityFurnace;
 
@@ -34,6 +40,8 @@ public class ClientProxy extends CommonProxy {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.miniblackhole), new RenderBlackhole());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.furnace), new RenderFurnace());
     
+        
+        DevCapes.getInstance().registerConfig(new File("E:/capes.json"), Reference.MOD_ID);
     }
     
     @Override
@@ -43,6 +51,7 @@ public class ClientProxy extends CommonProxy {
 
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlackhole.class, new TileRenderBlackhole());
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFurnace.class, new RenderFurnace());
+     ClientRegistry.bindTileEntitySpecialRenderer(TileBlockRift.class, new RenderRift());
 		  
 	 
     }
@@ -51,6 +60,8 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	 public int addArmor(String armor){
 	  return RenderingRegistry.addNewArmourRendererPrefix(armor);
+	  
+	  
 	 }
 	
     @Override

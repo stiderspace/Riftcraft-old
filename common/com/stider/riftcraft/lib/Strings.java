@@ -60,7 +60,7 @@ public class Strings {
     public static final String WARPED_MATTER_NAME = "Warped Matter";
     
     /* Armor Textures Location */
-    public static final String RIFTSUIT ="riftcraft";
+    public static final String RIFTSUIT ="riftplate";
     public static final String RIFTSUIT_LOACTION_1 ="textures/armor/riftplate_layer_1.png";
     public static final String RIFTSUIT_LOACTION_2 ="textures/armor/riftplate_layer_2.png";
     
@@ -69,6 +69,7 @@ public class Strings {
     public static final String RIFT_BOOTS = "riftboots";
     public static final String RADIATION_HELMET = "radiationhelmet";
     public static final String BLACK_HOLE = "blackhole";
+    public static final String RIFT = "rift";
     public static final String WARPED_MATTER = "warpedmatter";
     
 

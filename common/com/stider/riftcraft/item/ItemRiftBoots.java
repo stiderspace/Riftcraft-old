@@ -4,9 +4,12 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 
 import com.stider.riftcraft.Riftcraft;
+import com.stider.riftcraft.lib.Reference;
 import com.stider.riftcraft.lib.Strings;
+import com.stider.riftcraft.lib.Textures;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,11 +27,11 @@ public ItemRiftBoots(ArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1RegisterIcon) {
 		this.itemIcon = par1RegisterIcon.registerIcon(Strings.RESOURCE_PREFIX + Strings.RIFT_BOOTS);
-	
 	}
+	
 	@SideOnly(Side.CLIENT)
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer) {
-		return Strings.RESOURCE_PREFIX + Strings.RIFTSUIT_LOACTION_1;
+		return Reference.MOD_ID + ":textures/armor/riftplate_layer_1.png";
 	}
 	
 		

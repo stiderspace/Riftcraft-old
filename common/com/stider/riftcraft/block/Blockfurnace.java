@@ -41,7 +41,7 @@ public class Blockfurnace extends BlockContainer
     {
         super(Material.iron);
         setHardness(5F);
-        setStepSound(soundTypeAnvil);
+        setStepSound(Block.soundTypeAnvil);
         setBlockName(Strings.FURNACE);
         this.setCreativeTab(Riftcraft.tabsRFC);
         this.isActive = par2;
@@ -50,10 +50,11 @@ public class Blockfurnace extends BlockContainer
     
 
 	@Override
-	public TileEntity createNewTileEntity(World var1, int var2) {
+	public TileEntity createNewTileEntity(World world, int var2) {
+		
+		return new TileEntityFurnace();
+	}
 
-		return null;
-    }
 
     @Override
     public int getRenderType()
@@ -92,10 +93,6 @@ public class Blockfurnace extends BlockContainer
         return IconBuffer[0];
     }
     
-    public Block idDropped(int par1, Random random, int par3)
-    {
-        return ModBlocks.furnace;
-    }
 
     public void onBlockAdded(World World, int Par1, int Par2, int Par3)
     {
@@ -236,7 +233,7 @@ public class Blockfurnace extends BlockContainer
                             }
 
                             itemstack.stackSize -= k1;
-                            EntityItem entityitem = new EntityItem(par1World, (double)((float)par2 + f), (double)((float)par3 + f1), (double)((float)par4 + f2), new ItemStack(itemstack.getItem(), j1, itemstack.getItemDamage()));
+                            EntityItem entityitem = new EntityItem(par1World, (double)((float)par2 + f), (double)((float)par3 + f1), (double)((float)par4 + f2), new ItemStack(itemstack.getItem(), k1, itemstack.getItemDamage()));
 
                             if (itemstack.hasTagCompound())
                             {
@@ -258,5 +255,4 @@ public class Blockfurnace extends BlockContainer
 
         super.breakBlock(par1World, par2, par3, par4, par5, par6);
     }
-
 }
