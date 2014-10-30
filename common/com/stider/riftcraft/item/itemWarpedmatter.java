@@ -26,7 +26,7 @@ public class ItemWarpedmatter extends Item {
 			World World, int par4, int par5, int par6, int par7, float par8,
 			float par9, float par10) {
 
-		int RandomNumber = World.rand.nextInt(100);
+		int RandomNumber = World.rand.nextInt(200);
 		if (World.isRemote) {
 			ChatMessage.sendMessage("Your number is: " + RandomNumber,
 					entityPlayer);
